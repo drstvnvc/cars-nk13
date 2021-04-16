@@ -22,7 +22,8 @@
     </head>
     <body class="antialiased">
       <div>
-        <h1>Welcome to Cars project!</h1>
+        <h1>Welcome, {{$name}}!</h1>
+        <p>I am {{$age}} years old.</p>
       </div>
     </body>
 </html>
