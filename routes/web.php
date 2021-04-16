@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\CarController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,10 +16,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
   $name = 'Drago';
   $age = 25;
-  
+
   return view('welcome', compact('name', 'age')); //  ['name' => $name, 'age' => $age]);
 });
 
 Route::get('/about', function () {
   return view('about-us');
 });
+
+Route::get('/cars', [CarController::class, 'index']);
