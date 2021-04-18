@@ -1,14 +1,12 @@
-<html>
-  <head>
-    <title>Cars</title>
-  </head>
-  <body>
-    <h1>Cars</h1>
-    <ul>
+@extends('layouts.app')
+@section('title', 'Cars')
 
-      @foreach($cars as $car)
-        <li>{{$car->title}}</li>
-      @endforeach
-    </ul>
-  </body>
-</html>
+@section('content')
+  <h1>Cars</h1>
+  <ul>
+
+    @foreach($cars as $car)
+      <li>{{$car->title}}</li>
+    @endforeach
+  </ul>
+@endsection
